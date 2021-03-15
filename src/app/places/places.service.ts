@@ -44,4 +44,8 @@ export class PlacesService {
   getPlaces() {
     return [...this.places];
   }
+
+  getPlace(id: string) {
+    return {...this.places.find(place => place.id === id)}; // clone with spread operator
+  }
 }
