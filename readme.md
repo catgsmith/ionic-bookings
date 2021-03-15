@@ -29,7 +29,13 @@ $ ionic generate page bookings
 $ ionic serve
 ```
 
-
+### Other commands (use as needed)
+```  
+$ ng g module places/places --routing --flat
+```
+```
+$ ionic generate service places/places
+```
 
 ### References
 Tutorial from [Ionic 4 - Build iOS, Android and Web Apps with Ionic and Angular](https://learning.oreilly.com/api/v1/dashboard/continue/9781838828943/).
