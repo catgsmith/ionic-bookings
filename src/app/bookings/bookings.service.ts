@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Booking } from './booking.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookingsService {
+  bookingsChanged = new Subject<string[]>();
   private _bookings: Booking[] = [
     new Booking (
       'b001', 'p1', 'usr01', 'Acadia national park', 2
@@ -23,5 +25,6 @@ export class BookingsService {
       return booking.id !== bookingId;
     });
     console.log(this._bookings); 
+    this.bookingsChanged.next()
   }
 }
